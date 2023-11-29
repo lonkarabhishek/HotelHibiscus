@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Hotel Hibiscus</title>
@@ -21,6 +21,104 @@
     <link href="https://fonts.cdnfonts.com/css/apricot" rel="stylesheet">
 
     <style>
+        /* .sticky-footer {
+            width: 100%;
+            height: auto;
+            background-color: #000;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            bottom: 0;
+            padding: auto;
+            size: 40px;
+        } */
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            margin: auto;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            font-size: larger;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+        }
+        /* Navbar styling */
+        
+        .navbar-brand.title {
+            font-family: 'Playfair Display', serif;
+            font-size: x-large;
+            text-align: center;
+            margin: 0 auto;
+            color: white;
+            padding-top: 0%;
+            padding-bottom: 0%;
+        }
+        
+        .navbar-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 80px;
+            position: relative;
+        }
+        
+        .navbar-nav {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .navbar-nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        .navbar-toggler-icon {
+            color: #fff;
+            /* Change color according to your preference */
+        }
+        
+        .navbar {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
+            transition: all 0.4s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9;
+            color: white;
+            margin: 0;
+            /* Initial text color */
+        }
+        
+        .nav-link,
+        .navbar-brand.title {
+            color: white !important;
+            opacity: 0.8;
+            transition: all 0.3s ease-in-out;
+            /* Override the bootstrap default color */
+        }
+        
+        .scrolled {
+            /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgb(6, 6, 6)); */
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+        }
+        
+        .scrolled .nav-link,
+        .scrolled .navbar-brand.title {
+            color: black !important;
+            /* When scrolled, change text color to black */
+        }
+        
         body {
             font-family: Arial, sans-serif;
             /* background-color: #FAF3E0; */
@@ -485,6 +583,40 @@
             <li style="display: block"><a href="#reviews" class="nav-links">Reviews</a></li>
         </ul>
     </div>
+    <!-- Navbar code -->
+    <nav class="navbar navbar-expand-lg fixed-top carousel-container" style="box-shadow: none; ">
+        <div class="container-fluid">
+            <div class="navbar-center">
+                <a class="navbar-brand title" href="#">The People Udaipur</a>
+                <h2 class="navbar-brand title" style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Hotels & Resorts</h2>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Stays</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content block -->
+    <div class="content">
+        {% block content %} {% endblock content %}
+    </div>
+
 
     <!-- <div class="collapse navbar-collapse " id="navbarNav ">
         <ul class="navbar-nav ml-auto ">
@@ -539,7 +671,7 @@
         <div id="imageCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="desert-bedroom_bu_16x9.png" class="d-block w-100" alt="Image 1">
+                    <img src="{% static 'WhatsApp Image 2023-11-01 at 14.09.07 (1).jpeg' %}" class="d-block w-100" alt="Image 1">
                 </div>
                 <div class="carousel-item">
                     <img src="{% static 'WhatsApp Image 2023-11-01 at 14.09.07 (2).jpeg' %}" class="d-block w-100" alt="Image 2">
@@ -564,7 +696,7 @@
 
 
     <!-- Booking Pallet at the bottom of gallery -->
-    <!--   <div class="text-center booking-pallet">
+    <!-- <div class="text-center booking-pallet">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-10 col-md-8 col-lg-6 booking-form">
@@ -585,8 +717,8 @@
                                     <option>5 person</option>
                                     <option>6 person</option>
 
-                                    <!-- Add more options as needed -->
-                            <!--     </select>
+                                    Add more options as needed -->
+    <!-- </select>
                         </div>
                         <div class="col-3">
                             <button class="btn btn-primary w-100" id="book-now" disabled>Book Now</button>
@@ -770,7 +902,26 @@
                 <!-- Change to "fa-star" if you want a full star -->
 
             </div>
+            <!-- Sticky footer code -->
+            <div class="sticky-footer text-center" id="footer">
+                <div>
+                    <h2 style="display: flexbox;margin: auto; padding-bottom: 10px; padding-top: 20px;">The People Udaipur</h2>
+                    <p class="center" style="display: inline-flex;">Hotel & Resort</p>
+                    <p>Capital Tower, Mahala - Some Road, Sector 2 Udaipur or <a href="https://maps.app.goo.gl/jtXid1ExZYbcwo1u5"> click here 🔗</a></p>
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i> <a href="mailto:centralreservations@thepeopleudaipur.com">centralreservations@thepeopleudaipur.com</a>
+                    <i class="fas fa-phone-alt"></i> <a href="tel:18000007707">1800 000 7707</a> | Toll Free Number
+                    <i class="fas fa-phone-alt"></i> <a href="tel:+919919910578">+91 991991 0578</a> | Hotel Reservation
+                </div>
 
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
 
 
 
@@ -940,7 +1091,23 @@
                 // Initial display
                 showSlide(currentIndex);
             </script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $(window).scroll(function() {
+                        console.log("Scrolled: " + $(document).scrollTop());
+                        if ($(document).scrollTop() > 100) {
+                            console.log("Adding 'scrolled' class");
+                            $('.navbar').addClass('scrolled');
+                        } else {
+                            console.log("Removing 'scrolled' class");
+                            $('.navbar').removeClass('scrolled');
+                        }
+                    });
+                });
+            </script>
 </body>
 
 </html>
-{% endblock %}
