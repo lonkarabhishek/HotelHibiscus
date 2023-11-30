@@ -693,7 +693,7 @@ Regional and international cuisine is served on a roof terrace, which features d
 
             </div>
             <!-- Reviews Section -->
-            <div style="background-color: #e5d0b1;margin: auto; padding: 0%;">
+            <div style="background-color: #e5d0b1;">
                 <div class="reviews-container carousel slide" data-ride="carousel" id="reviews">
                     <h2 style="font-weight: bold;
         margin-bottom: 30px;
@@ -702,7 +702,7 @@ Regional and international cuisine is served on a roof terrace, which features d
                     <!-- Slides Wrapper -->
                     <div class="carousel-inner" style="height: auto; width: auto;">
                         <div class="carousel-item active" style="height: auto; width: 100%; object-fit: cover; ">
-                            <img src="{% static 'person1.jpeg' %}" alt="Reviewer 1" class="reviewer-image" style=" width: 80px !important; 
+                            <img src="person1.jpeg" alt="Reviewer 1" class="reviewer-image" style=" width: 80px !important; 
                 height: 80px !important;">
 
                             <p class="review-text" style=" width: auto !important; 
@@ -712,7 +712,7 @@ Regional and international cuisine is served on a roof terrace, which features d
                             <span class="review-author">Killer, Chess</span>
                         </div>
                         <div class="carousel-item" style="height: auto; width: 100%; object-fit: cover; ">
-                            <img src="{% static 'person2.jpg' %}" alt="Reviewer 2" class="reviewer-image" style=" width: 80px !important; 
+                            <img src="person2.jpg" alt="Reviewer 2" class="reviewer-image" style=" width: 80px !important; 
                 height: 80px !important;">
                             <h3>Bishop</h3>
                             <p class="review-text">"I stayed at Hotel Hibiscus during my business trip, and it was the perfect blend of luxury and comfort. The rooms were spacious and well-appointed, and the staff went out of their way to ensure I had everything I needed.
@@ -720,7 +720,7 @@ Regional and international cuisine is served on a roof terrace, which features d
                             <span class="review-author">Keeper, Chess</span>
                         </div>
                         <div class="carousel-item" style="height: auto; width: 100%; object-fit: cover; ">
-                            <img src="{% static 'photo.jpeg' %}" alt="Reviewer 2" class="reviewer-image" style=" width: 150px !important; 
+                            <img src="photo.jpeg" alt="Reviewer 2" class="reviewer-image" style=" width: 150px !important; 
                 height: 150px !important;">
                             <h3>King</h3>
                             <p class="review-text">"Our honeymoon at Hotel Hibiscus was nothing short of magical. The sunset boat rides, the spa treatments, and the intimate candlelit dinners made our stay memorable. The staff's attention to detail and personalized service
@@ -739,17 +739,7 @@ Regional and international cuisine is served on a roof terrace, which features d
 
                     </div>
                 </div>
-                <!-- Rating Section -->
-                <!-- <div class="rating-container text-center mt-4" style="font-size: 1.5em;">
-            <span class="fa fa-star checked" style="color: gold;"></span>
-            <span class="fa fa-star checked" style="color: gold;"></span>
-            <span class="fa fa-star checked" style="color: gold;"></span>
-            <span class="fa fa-star checked" style="color: gold;"></span>
-            <span class="fa fa-star-half checked" style="color: gold;"></span>
-
-            <span class="rating-number ml-2" style="font-weight: bold;">4.7/5</span>
-        </div> -->
-                <!-- Change to "fa-star" if you want a full star -->
+       
 
             </div>
             <!-- Sticky footer code -->
@@ -788,50 +778,7 @@ Regional and international cuisine is served on a roof terrace, which features d
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
             <script>
-                // $(document).ready(function() {
-                //     var carouselHeight = $('.carousel-container').height();
-
-                //     $(window).scroll(function() {
-                //         var scrollPos = $(window).scrollTop();
-
-                //         // Show or hide the floating nav
-                //         if (scrollPos > carouselHeight) {
-                //             $('.floating-nav').css('visibility', 'visible');
-                //         } else {
-                //             $('.floating-nav').css('visibility', 'hidden');
-                //         }
-
-                //         // Underline the link of the section in view
-                //         $('.nav-links').each(function() {
-                //             var href = $(this).attr('href');
-                //             var target = $(href);
-                //             if (target.position().top <= scrollPos && target.position().top + target.height() > scrollPos) {
-                //                 $('.nav-links').removeClass('active');
-                //                 $(this).addClass('active');
-                //             } else {
-                //                 $(this).removeClass('active');
-                //             }
-                //         });
-                //     });
-                // });
-                // $(document).ready(function() {
-                //     $(window).scroll(function() {
-                //         if ($(document).scrollTop() > $(window).height()) { // Check if user scrolled past the carousel
-                //             $('.floating-nav').fadeIn(); // Show the navigation box
-                //         } else {
-                //             $('.floating-nav').fadeOut(); // Hide the navigation box
-                //         }
-
-                //         // Check which section is currently in view and update active link
-                //         $('.nav-links').each(function() {
-                //             var sectionId = $(this).attr('href');
-                //             if ($(sectionId).position().top <= $(document).scrollTop() + 100) {
-                //                 $('.nav-links').removeClass('active');
-                //                 $(this).addClass('active');
-                //             }
-                //         });
-                //     });
-                // });
+                
                 $(document).ready(function() {
                     $(window).scroll(function() {
                         // Display the floating nav after scrolling past the carousel
